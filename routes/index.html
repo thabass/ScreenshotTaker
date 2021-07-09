@@ -5,9 +5,10 @@
   </span>
 </head>
 
-<link rel="stylesheet" href="C:\Users\THABBY\OneDrive\Desktop\Screenshot-application\style.css">
+<!-- <link rel="stylesheet" href="C:\Users\THABBY\OneDrive\Desktop\Screenshot-application\style.css"> -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/sketchy/bootstrap.min.css">
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<script src="C:\Users\THABBY\OneDrive\Desktop\Screenshot-application\routes\users.js"></script>
 
 <body class="border border-secondary" style="border: 130px ">
  
@@ -30,68 +31,105 @@
                  <form action='/screenshot' method= 'post' id='screenshot'>
                   
                  <input type="url" class="form-control" id="exampleInputEmail1" placeholder="http://www.xyz.com" name="name" >
-                  
+                 
                 </div>
-  
-                <input type="submit"class="btn btn-success" value="Submit" width="200">
+                <!-- <div class="card text-white bg-secondary mb-3" style="width: 105"style="align-items: left;">
+                <input type="width" class="form-control" id="exampleInputEmail1" placeholder="Width" name="width" style='width: 100px' >
+                </div>
+                <div class="card text-white bg-secondary mb-3" style="width: 105"style="align-items: left;">
+                  <input type="height" class="form-control" id="exampleInputEmail1" placeholder="height" name="height" style='width: 100px' >
+                  </div>
+                <div class="card text-white bg-secondary mb-3" style="width: 105">
+                <input type="value" class="form-control" id="exampleInputEmail1" placeholder="Image Type" name="type" style='width: 100px'>
+                </div> -->
+                <input type="submit"class="btn btn-success"  value="Submit" width="200">
+                
+                </div>
+                
               </div>
+              
             </div>
+            <div class="card text-white bg-secondary mb-3" style="margin: 15px">
+              <div class="card-header">About</div>
+              <div class="card-body">
+                <h4 class="card-title">Screenshot Taker</h4>
+                <h6>Email:screenshottaker@gmail.com</h6>
+                <p class="card-text">This website is used to take screenshots for requests through URL .By Pasting the 
+                  url for screenshot and Click Submit to get screenshot with your requested File type and Resolution</p>
+    
+             </div>
+            </div>
+            <div class= "card text-white bg-secondary mb-3" style="margin: 15px">
+              <div class="card-header">Contact</div>
+              <div class="card-body">
+                <h4 class="card-title">Thabass.H</h4>
+                <h6>Email:screenshottaker@gmail.com</h6>
+                <p class="card-text">Contact through the Mail</p>
+              </div>
+                 
+             </div>
            </div>
          </form>
-         <div class="card text-white bg-secondary mb-3" style="margin: 15px">
-          <div class="card-header">About</div>
-          <div class="card-body">
-            <h4 class="card-title"></h4>
-            <h6>Email:screenshottaker@gmail.com</h6>
-            <p class="card-text"></p>
-
-         </div>
-        </div>
-        <div class= "card text-white bg-secondary mb-3" style="margin: 15px">
-          <div class="card-header">Contact</div>
-          <div class="card-body">
-            <h4 class="card-title"></h4>
-            <h6>Email:screenshottaker@gmail.com</h6>
-            <p class="card-text"></p>
-          </div>
-             
-         </div>
+         
                      
           
           
           </div>
-          </div>   
+          </div> 
           
-          <script type="text/javascript">
+          
+          
+           <!-- <script type="text/javascript">
 
-          document.getElementById('screenshot').addEventListener('click', getfetch);
+          // document.getElementById('screenshot').addEventListener('click', getfetch);
 
-          function getfetch()
-          {
-            fetch('website.png')
-            .then(function(res){
+          // function getfetch()
+          // {
+          //   fetch('website.png')
+          //   .then(function(res){
             
-              return res.sendfile('')
-            })
-          }
+          //     return res.sendfile('')
+          //   })
+          // }
+          function getfetch(){
 
-            let response =document.getElementById('screenshot');
+           // let response =document.getElementById('screenshot');
             let url=document.getElementById('exampleInputEmail1');
 
-            response.addEventListener('submit',fetch('/screenshot',{
+            fetch('/screenshot',{
                 method:'POST',
                 body:url,
-            })).then();
+            }).then(console.log("sucess"))
+            .catch(console.log("error"));
+          }
             
             // response.blob(/Screenshot/Website.png)
             //response.blob();
             
             
             
-            </script>
+            </script>  -->
 
-          
+         <!-- <div id="img"></div>  -->
 
 </body>
+
+<!-- <script>
+
+  // let link =document.createElement('a');
+  // let url=document.getElementById('name');
+  // link.download='Screenshot'+url+'.png';
+
+  // let blob=new Blob([''])
+
+
+  // var img=document.createElement('img');
+
+  //  img.src ="website.png";
+
+  //  var src =document.getElementById('x');
+
+  // src.appendChild(img);
+</script> -->
        
 </html> 
