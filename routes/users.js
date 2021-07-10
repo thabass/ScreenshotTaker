@@ -16,7 +16,7 @@ router.post('/',async function(req,res)
 // const takescreenshot= async ()=>
 // {
 
-    const browser= await puppeteer.launch();
+    const browser= await puppeteer.launch({args:['--no-sandbox']});
     const page= await browser.newPage();
 
     const string = uuidv4();
